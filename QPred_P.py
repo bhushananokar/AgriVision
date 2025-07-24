@@ -10,11 +10,7 @@ from tqdm import tqdm
 import logging
 import math
 
-class RealisticTempPredictor:
-    """
-    Climate prediction using trained quantum ML models
-    With realistic temperature pattern generation
-    """
+class TempPredictor:
     
     def __init__(self, models_dir="ML_Pipeline/trained_qml_models"):
         """Initialize with path to model directory"""
@@ -697,7 +693,7 @@ if __name__ == "__main__":
     random.seed(datetime.now().timestamp())  # Use current time for varied results
     
     # Initialize predictor
-    predictor = RealisticTempPredictor()
+    predictor = TempPredictor()
     
     # Get prediction for today
     today = datetime.now().strftime('%Y-%m-%d')
